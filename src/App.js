@@ -19,22 +19,25 @@ function App() {
   return (
     <div>
       <Nav 
-      categories={categories}
-      setCurrentCategory={setCurrentCategory}
-      currentCategory={currentCategory}
-      contactSelected={contactSelected}
-      setContactSelected={setContactSelected}
-    />
+        categories={categories}
+        setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Nav>
+    <main>
     {!contactSelected ? (
-          <>
-            <About currentCategory={currentCategory}></About>
-          </>
+        <About />
         ) : (
-          <>
-          <ContactForm />
-          </>
+        <ContactForm />
         )}
-      
+      {/* <>
+      <About />
+      <Portfolio />
+          <Resume />
+          <ContactForm />
+      </> */}
+      </main>
 
       <Footer />
     </div>
