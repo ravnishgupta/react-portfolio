@@ -34,26 +34,29 @@ function ContactForm () {
     console.log(formState);
   }
   return (
-    <section>
-        <h1>Contact Me</h1>
+    <section className="px-3">
         <form id='contact-form' onSubmit={handleSubmit}>
-            <div>
+            <div className='py-2'>
                 <label htmlFor="name">Name:</label>
                 <input type='text' name='name' defaultValue={name} onBlur={handleChange}  />
             </div>
-            <div>
+            <div className='py-2'>
                 <label htmlFor="email">Email:</label>
                 <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
             </div>
             {errorMessage && (
-                <div>
+                <div className='py-2'>
                     <p className="error-text">{errorMessage}</p>
                 </div>
             )}
-            <div>
+            <div className='py-4'>
                 <label htmlFor="message">Message:</label>
                 <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
-                <button type='submit'>Submit</button>
+            </div>
+            <div className="row py-2">
+              <div className="col align-items-center">
+                <button type='submit' className="btn btn-secondary">Submit</button>
+              </div>
             </div>
         </form>
     </section>

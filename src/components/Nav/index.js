@@ -17,11 +17,11 @@ function Nav (props) {
     
 
       return (
-        <header className="flex-row px-1">
+        <header className="flex py-2 bg-primary">
           <nav>
               <div className="container-sm">
               <div className="row">
-                <div className="col">Ravnish Gupta</div>
+                <div className="col fw-bold fst-italic">Ravnish Gupta</div>
                 
                 {categories.map((category) => (
                   <div

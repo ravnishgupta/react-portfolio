@@ -4,7 +4,7 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
+  --primary: rgb(140, 84, 255);
   --secondary: #f3a847;
   --tertiary: #b12704;
   --light: #fafafa;
@@ -288,4 +288,13 @@ a {
 
 .navActive {
   color: var(--secondary);
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  text-align: center; 
 }
