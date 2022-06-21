@@ -2,12 +2,12 @@ import React from "react";
 
 function Portfolio() {
     const projects = [
-        {name:'Employee Tracker', github:'https://github.com/ravnishgupta/employee-tracker'},
-        {name:'Note Taker', github:'https://github.com/ravnishgupta/note-taker'},
-        {name:'Team Profile Generator', github:'https://github.com/ravnishgupta/team-profile-generator'},
-        {name:'Professional ReadMe Generator', github:'https://github.com/ravnishgupta/team-profile-generator'},
-        {name:'Movie Search', github:'https://github.com/ravnishgupta/movie-search'},
-        {name:'Weather Dashboard', github:'https://github.com/ravnishgupta/weather-dashboard'},
+        {name:'Employee Tracker', github:'https://github.com/ravnishgupta/employee-tracker', num:1},
+        {name:'Note Taker', github:'https://github.com/ravnishgupta/note-taker', num:2},
+        {name:'Team Profile Generator', github:'https://github.com/ravnishgupta/team-profile-generator', num:3},
+        {name:'Professional ReadMe Generator', github:'https://github.com/ravnishgupta/team-profile-generator',  num:4},
+        {name:'Movie Search', github:'https://github.com/ravnishgupta/movie-search', num:5},
+        {name:'Weather Dashboard', github:'https://github.com/ravnishgupta/weather-dashboard', num:6},
     ]
 
     return (
@@ -16,11 +16,11 @@ function Portfolio() {
         <div className="row">
             {
                 projects.map((project) => (
-                    <div className="col-sm-6">
-                        <div class="card bg-light mb-3">
-                            <div class="card-body">
-                                <h6 class="card-title">{project.name}</h6>
-                                <a href={project.github} className="btn btn-primary" target='_blank' rel="noreferrer">GitHub</a>
+                    <div className="col-sm-6" key={project.num}>
+                        <div className="card bg-light mb-3" >
+                            <div className="card-body">
+                                <h6 className="card-title">{project.name}</h6>
+                                <a href={project.name} className="btn btn-primary" target='_blank' rel="noreferrer">GitHub</a>
                             </div>
                         </div>
                     </div>

@@ -119,6 +119,7 @@ button[disabled] {
 
 img {
   max-width: 25%;
+  max-height: 25%;
 }
 
 span[role='img'] {
@@ -294,6 +295,7 @@ a {
   position: fixed;
   left: 0;
   bottom: 0;
+  height: 25px;
   width: 100%;
   background-color: grey;
   text-align: center; 

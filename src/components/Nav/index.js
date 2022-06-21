@@ -19,11 +19,11 @@ function Nav (props) {
           <nav>
               <div className="container-sm">
               <div className="row">
-                <div className="col fw-bold fst-italic">Ravnish Gupta</div>
+                <div className="col fw-bold fst-italic text-center">Ravnish Gupta</div>
                 
                 {categories.map((category) => (
                   <div
-                    className={`col-sm mx-2 ${ 
+                    className={`col-sm mx-2 text-center ${ 
                       currentCategory.name === category.name && 'navActive' 
                       }`}
                       key={category.name}
