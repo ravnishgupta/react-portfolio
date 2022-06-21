@@ -45,15 +45,15 @@ function ContactForm () {
                 <label htmlFor="email">Email:</label>
                 <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
             </div>
+            <div className='py-2'>
+                <label htmlFor="message">Message:</label>
+                <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
+            </div>
             {errorMessage && (
                 <div className='py-2'>
                     <p className="error-text">{errorMessage}</p>
                 </div>
             )}
-            <div className='py-2'>
-                <label htmlFor="message">Message:</label>
-                <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
-            </div>
             <div className="row py-2">
               <div className="col align-items-center">
                 <button type='submit' className="btn btn-secondary">Submit</button>
