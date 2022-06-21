@@ -23,7 +23,7 @@ function Nav (props) {
                 
                 {categories.map((category) => (
                   <div
-                    className={`col mx-2 ${ 
+                    className={`col-sm mx-2 ${ 
                       currentCategory.name === category.name && 'navActive' 
                       }`}
                       key={category.name}
