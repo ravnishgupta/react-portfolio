@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail, capitalizeFirstLetter } from '../../utils/helpers';
 
 
 function ContactForm () {
@@ -18,7 +18,7 @@ function ContactForm () {
           }
     } else {
         if (!e.target.value.length) {
-          setErrorMessage(`${e.target.name} is required.`);
+          setErrorMessage(`${capitalizeFirstLetter(e.target.name)} is required.`);
         } else {
           setErrorMessage('');
         }
@@ -36,29 +36,28 @@ function ContactForm () {
   return (
     <section>
         <h2>Contact Me</h2>
+      
         <form id='contact-form' onSubmit={handleSubmit}>
-            <div className='py-2'>
-                <label htmlFor="name">Name:</label>
-                <input type='text' name='name' defaultValue={name} onBlur={handleChange}  />
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input type="text" className="form-control" name='name' aria-describedby="emailHelp" placeholder="Enter name" defaultValue={name} onBlur={handleChange}  />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email address</label>
+            <input type="email" className="form-control" name='email' aria-describedby="emailHelp" placeholder="Enter email" defaultValue={email} onBlur={handleChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea name='message' rows='5' className="form-control" defaultValue={message} onBlur={handleChange} />
+          </div>
+          <div className="form-group py-2">
+                <button type='submit' className="btn btn-primary" >Submit</button>
+          </div>
+          {errorMessage && (
+            <div className='form-group'>
+                <p className="text-danger">{errorMessage}</p>
             </div>
-            <div className='py-2'>
-                <label htmlFor="email">Email:</label>
-                <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
-            </div>
-            <div className='py-2'>
-                <label htmlFor="message">Message:</label>
-                <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
-            </div>
-            {errorMessage && (
-                <div className='py-2'>
-                    <p className="error-text">{errorMessage}</p>
-                </div>
-            )}
-            <div className="row py-2">
-              <div className="col align-items-center">
-                <button type='submit' className="btn btn-secondary">Submit</button>
-              </div>
-            </div>
+          )}
         </form>
     </section>
   );
