@@ -7,12 +7,10 @@ function Nav (props) {
         categories = [],
         setCurrentCategory,
         currentCategory
-       // contactSelected,
-       // setContactSelected
       } = props;
     
       useEffect(() => {
-        document.title = capitalizeFirstLetter(currentCategory.name);
+        document.title = capitalizeFirstLetter(currentCategory.description);
       }, [currentCategory]);
     
 
@@ -25,27 +23,21 @@ function Nav (props) {
                 
                 {categories.map((category) => (
                   <div
-                    className={`col mx-2 ${
-                      // currentCategory.name === category.name && !contactSelected && 'navActive' 
+                    className={`col mx-2 ${ 
                       currentCategory.name === category.name && 'navActive' 
                       }`}
-                    key={category.name}
+                      key={category.name}
                   >
                       <span
                         onClick={() => {
                           setCurrentCategory(category);
-                          //setContactSelected(false);
                         }}
                       >
                         {capitalizeFirstLetter(category.name)}
                       </span>
                   </div>
-                 
                 ))
                }
-                 {/* <div className={`col mx-2 ${contactSelected && 'navActive'}`}>
-                   <span onClick={() => setContactSelected(true)}>Contact</span>
-                 </div> */}
                 </div>               
                </div>
           </nav>

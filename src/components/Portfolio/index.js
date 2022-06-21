@@ -3,7 +3,7 @@ import React from "react";
 function Portfolio() {
     return (
         <section>
-        <p>teset</p>
+        <h2>Portfolio</h2>
         </section>
     )
 }

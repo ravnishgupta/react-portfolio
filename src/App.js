@@ -16,7 +16,6 @@ function App() {
   ]); 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const renderPage = () => {
-    //console.log(currentCategory.name)
     switch (currentCategory.name) {
       case 'about':
         return <About />;
@@ -29,11 +28,7 @@ function App() {
       default:
         return <About />
     }
-    // if (currentCategory.name === 'about') {
-    //   return <About />
-    // }
   }
-  //const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
@@ -41,31 +36,12 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-        //contactSelected={contactSelected}
-        //setContactSelected={setContactSelected}
       ></Nav>
-    <main>
-    
-      {renderPage()}
-      {/* <About currentCategory={currentCategory}/>
-        <Portfolio currentCategory={currentCategory} />
-        <Resume currentCategory={currentCategory} />
-        <ContactForm currentCategory={currentCategory} /> */}
-    
-      </main>
-    {/* {!contactSelected ? (
-      <>
-        <About />
-        <Portfolio currentCategory={currentCategory} />
-      </>
-        ) : (
-        <ContactForm />
-        )} */}
-      {/* </main> */}
-
+      <main>
+        {renderPage()}
+        </main>
       <Footer />
     </div>
-
   );
 }
 
