@@ -20,7 +20,7 @@ function Portfolio() {
                         <div className="card bg-light mb-3" >
                             <div className="card-body">
                                 <h6 className="card-title">{project.name}</h6>
-                                <a href={project.name} className="btn btn-primary" target='_blank' rel="noopener">GitHub</a>
+                                <a href={project.name} className="btn btn-primary" target='_blank' rel="noopener noreferrer">GitHub</a>
                             </div>
                         </div>
                     </div>
