@@ -9,12 +9,31 @@ import Resume from './components/Resume';
 
 function App() {
   const [categories] = useState([
-    { name: 'about me', description: 'About Me' },
+    { name: 'about', description: 'About Me' },
     { name: 'portfolio', description: 'My Portfolio' },
     { name: 'resume', description: 'My Resume' },
+    { name: 'contact', description: 'Contact' },
   ]); 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [contactSelected, setContactSelected] = useState(false);
+  const renderPage = () => {
+    //console.log(currentCategory.name)
+    switch (currentCategory.name) {
+      case 'about':
+        return <About />;
+      case 'portfolio':
+        return <Portfolio />
+      case 'resume':
+        return <Resume />
+      case 'contact':
+        return <ContactForm />
+      default:
+        return <About />
+    }
+    // if (currentCategory.name === 'about') {
+    //   return <About />
+    // }
+  }
+  //const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
@@ -22,22 +41,27 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
+        //contactSelected={contactSelected}
+        //setContactSelected={setContactSelected}
       ></Nav>
     <main>
-    {!contactSelected ? (
+    
+      {renderPage()}
+      {/* <About currentCategory={currentCategory}/>
+        <Portfolio currentCategory={currentCategory} />
+        <Resume currentCategory={currentCategory} />
+        <ContactForm currentCategory={currentCategory} /> */}
+    
+      </main>
+    {/* {!contactSelected ? (
+      <>
         <About />
+        <Portfolio currentCategory={currentCategory} />
+      </>
         ) : (
         <ContactForm />
-        )}
-      {/* <>
-      <About />
-      <Portfolio />
-          <Resume />
-          <ContactForm />
-      </> */}
-      </main>
+        )} */}
+      {/* </main> */}
 
       <Footer />
     </div>

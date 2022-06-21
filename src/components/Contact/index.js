@@ -34,7 +34,7 @@ function ContactForm () {
     console.log(formState);
   }
   return (
-    <section className="px-3">
+    <section>
         <form id='contact-form' onSubmit={handleSubmit}>
             <div className='py-2'>
                 <label htmlFor="name">Name:</label>
@@ -49,7 +49,7 @@ function ContactForm () {
                     <p className="error-text">{errorMessage}</p>
                 </div>
             )}
-            <div className='py-4'>
+            <div className='py-2'>
                 <label htmlFor="message">Message:</label>
                 <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
             </div>
