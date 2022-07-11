@@ -48,3 +48,8 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 ```
 
 ## Screenshots
+![About Me](https://user-images.githubusercontent.com/34320760/174916193-2e6f0acc-b939-42ec-a94a-93bc9558c2a0.png)
+![My Portfolio](https://user-images.githubusercontent.com/34320760/174916240-f8c9ebda-41bb-433f-a325-6d0b3216e708.png)
+![My Resume](https://user-images.githubusercontent.com/34320760/174916319-8e17e19b-630b-4c0e-843a-0d8933d15ff4.png)
+![Contact Me](https://user-images.githubusercontent.com/34320760/174916354-7f0c6597-0fbd-47b1-83f1-023948e4fbb7.png)
+
