@@ -8,6 +8,7 @@ function Portfolio() {
         {name:'Professional ReadMe Generator', github:'https://github.com/ravnishgupta/team-profile-generator',  num:4},
         {name:'Movie Search', github:'https://github.com/ravnishgupta/movie-search', num:5},
         {name:'Weather Dashboard', github:'https://github.com/ravnishgupta/weather-dashboard', num:6},
+        {name:'Get a Job!', github:'https://github.com/ravnishgupta/get-a-job', num:7},
     ]
 
     return (
